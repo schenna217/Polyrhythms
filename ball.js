@@ -5,12 +5,18 @@ class Ball {
         this.speed = speed;
         // Control ball at beginning of track
         this.offset = 0;
+        this.direction = 1;
         this.center = this.track.getPosition(this.offset);
     }
 
     move() {
         this.offset += this.speed;
         this.center = this.track.getPosition(this.offset);
+        // Changes direction of ball movement along horizontal distance of the circle
+        if (this.center.y > this.track.center.y) {
+            this.direction *= -1;
+            playSound();
+        }
     }
 
     draw(ctx) {
