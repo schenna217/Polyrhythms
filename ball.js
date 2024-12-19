@@ -1,11 +1,12 @@
 class Ball {
-    constructor(track, radius, speed) {
+    constructor(track, radius, speed, soundFrequency) {
         this.track = track;
         this.radius = radius;
         this.speed = speed;
+        this.soundFrequency = soundFrequency;
         // Control ball at beginning of track
         this.offset = 0;
-        this.direction = 1;
+        this.round = 0;
         this.center = this.track.getPosition(this.offset);
     }
 
@@ -15,7 +16,7 @@ class Ball {
         // Changes direction of ball movement along horizontal distance of the circle
         if (this.center.y > this.track.center.y) {
             this.direction *= -1;
-            playSound();
+            playSound(this.soundFrequency);
         }
     }
 
