@@ -1,7 +1,8 @@
 class Track {
-    constructor(center, radius) {
+    constructor(center, radius, hue) {
         this.center = center;
         this.radius = radius;
+        this.hue = hue;
         this.period = Math.PI;
     }
 
@@ -26,7 +27,7 @@ class Track {
         }
         ctx.closePath();
 
-        ctx.strokeStyle = "white";
+        ctx.strokeStyle = `hsl(${this.hue}, 100%, 50%)`;
         ctx.stroke();
     }
 }
