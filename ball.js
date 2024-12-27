@@ -1,9 +1,10 @@
 class Ball {
-    constructor(track, radius, speed, soundFrequency) {
+    constructor(track, radius, speed, soundFrequency, hue) {
         this.track = track;
         this.radius = radius;
         this.speed = speed;
         this.soundFrequency = soundFrequency;
+        this.hue = hue;
         // Control ball at beginning of track
         this.offset = 0;
         this.round = 0;
@@ -26,7 +27,10 @@ class Ball {
     draw(ctx) {
         ctx.beginPath();
         ctx.arc(this.center.x, this.center.y, this.radius, 0, Math.PI * 2);
+        ctx.lineWidth = 2;
         ctx.strokeStyle = "white";
+        ctx.fillStyle = `hsl(${this.hue}, 100%, 50%)`;
+        ctx.fill();
         ctx.stroke();
     }
 }
