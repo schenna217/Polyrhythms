@@ -1,3 +1,2 @@
-## Almost complete
-<!--Need to make some minor changes to code for functionality-->
-<!--Compare and make corrections-->
+## Polyrhythms
+### This project creates a visual diagram that corresponds with music notes being played, all while using fundamental math concepts to display the project
