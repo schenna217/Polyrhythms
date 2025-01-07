@@ -4,7 +4,7 @@
         <title>Polyrhythm</title>
     </head>
     <body>
-        <canvas id = "myCanvas" style="background-color: black;"></canvas>
+        <canvas id = "myCanvas" style="background-color:black;"></canvas>
         <script src="sound.js"></script>
         <script src="track.js"></script>
         <script src="ball.js"></script>
@@ -31,7 +31,7 @@
             const N = 20;
 
             for (let i = 0; i < N; i++) {
-                const trackRadius = trackMinRadius + 1 * trackStep;
+                const trackRadius = trackMinRadius + i * trackStep;
                 const ballSpeed = ballMinSpeed + i * ballSpeedStep;
                 const ballSoundFrequency = soundFrequencies[i];
                 const hue = (i * 360) / N;
@@ -52,8 +52,6 @@
                 balls.forEach((ball) => ball.draw(ctx));
                 requestAnimationFrame(animate);
             }
-            track.draw(ctx);
-            ball.draw(ctx);
         </script>
     </body>
 </html>

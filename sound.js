@@ -1,4 +1,4 @@
-const audioCtx = new (Window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 function playSound(frequency = 440, duration = 2) {
     const osc = audioCtx.createOscillator();

@@ -27,7 +27,6 @@ class Track {
             ctx.lineTo(pos.x, pos.y);
         }
         ctx.closePath();
-
         ctx.strokeStyle = `hsl(${this.hue}, 100%, 50%)`;
         ctx.stroke();
     }
